@@ -3,15 +3,19 @@
 
 Ce projet a été créé en réponse a la demande de test technique de la societé 'L'atelier'.
 
+## Dépendance
+
+Pour utiliser cette application, il faut le JDK 17, ainsi que Maven 3.8. 
+
 ## Compilation et test
 
-C'est un projet fait avec Maven, il suffit donc de compiler avec lui.
+Il suffit de lancer la compilation avec Maven.
 
 ```bash
 mvn compile
 ```
 
-*Les tests se lanceron de la même maniére.
+*Les tests se lanceront de la même manière.
 
 ```bash
 mvn test
@@ -68,10 +72,11 @@ curl -X GET http://localhost:9988/stat
 
 ### Tâche 4
 
-Une execution de l'application est disponible a l'URL:
+Une execution de l'application est disponible a l'URL: 
  
- https://a
+ https://demo.i-nazareth.fr/testatelier1
 
+* L'url sera valide jusqu'au 30/07/2022
 
 ## Ajout supplémentaire
 
@@ -98,5 +103,5 @@ curl -X PUT -H "Content-Type: application/json" http://localhost:9988/players -d
 Pour la suppression d'un joueur existant
 
 ```bash
-curl -X DELETE -H "Content-Type: application/json" http://localhost:9988/players/52
+curl -X DELETE http://localhost:9988/players/52
 ```
