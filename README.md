@@ -64,7 +64,7 @@ Créer un endpoint qui retourne les statistiques suivantes :
 - IMC moyen de tous les joueurs
 - La médiane de la taille des joueurs
 
-Un service '/stat' a été rajouté pour cet usage.
+Un endpoint '/stat' a été rajouté pour cet usage.
 
 ```bash
 curl -X GET http://localhost:9988/stat
@@ -72,7 +72,7 @@ curl -X GET http://localhost:9988/stat
 
 ### Tâche 4
 
-Une execution de l'application est disponible a l'URL: 
+Un déploiement de l'application est disponible a l'URL: 
  
  https://demo.i-nazareth.fr/testatelier1
 
