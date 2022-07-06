@@ -74,7 +74,7 @@ curl -X GET http://localhost:9988/stat
 
 Un déploiement de l'application est disponible a l'URL: 
  
- https://demo.i-nazareth.fr/testatelier1
+ https://demo.i-nazareth.fr/testatelier1/
 
 * L'url sera valide jusqu'au 30/07/2022
 
