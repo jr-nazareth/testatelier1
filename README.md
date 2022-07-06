@@ -78,6 +78,10 @@ Une execution de l'application est disponible a l'URL:
 
 * L'url sera valide jusqu'au 30/07/2022
 
+```bash
+curl -X GET https://demo.i-nazareth.fr/testatelier1/stat
+```
+
 ## Ajout supplémentaire
 
 Les tâches demandées n'ont nécessité que d’utiliser la méthode GET. L'idée étant de rajouter les méthodes manquantes pour avoir un cycle de vie d'objet complet.
