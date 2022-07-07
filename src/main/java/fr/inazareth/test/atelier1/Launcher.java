@@ -2,6 +2,7 @@ package fr.inazareth.test.atelier1;
 
 import fr.inazareth.test.atelier1.business.player.service.PlayerSimpleService;
 import fr.inazareth.test.atelier1.business.player.service.PlayerStatService;
+import fr.inazareth.test.atelier1.core.http.NoEndPointServlet;
 
 /**
  *
@@ -14,6 +15,7 @@ public class Launcher {
                 .configure(args)
                 .addEndPoint(PlayerSimpleService.class, "/players/*")
                 .addEndPoint(PlayerStatService.class, "/stat/*")
+                .addEndPoint(new NoEndPointServlet(), "/*")
                 .build();
         a.start();
     }

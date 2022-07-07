@@ -1,4 +1,4 @@
-package fr.inazareth.test.atelier1.http;
+package fr.inazareth.test.atelier1.core.http;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.inazareth.test.atelier1.Application;

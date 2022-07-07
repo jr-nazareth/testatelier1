@@ -3,9 +3,10 @@ package fr.inazareth.test.atelier1;
 import fr.inazareth.test.atelier1.business.player.service.PlayerInitialiserService;
 import fr.inazareth.test.atelier1.core.ObjectService;
 import fr.inazareth.test.atelier1.core.storage.ObjectStorage;
-import fr.inazareth.test.atelier1.http.ServiceRestServlet;
+import fr.inazareth.test.atelier1.core.http.ServiceRestServlet;
 import java.lang.reflect.InvocationTargetException;
 import java.util.zip.Deflater;
+import javax.servlet.Servlet;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
@@ -57,6 +58,13 @@ public class Application {
         public <T extends ObjectService> Builder addEndPoint(Class<T> c, String path) throws Exception {
             ServiceRestServlet<T> servlet = new ServiceRestServlet<>(application, c);
             ServletHolder holder = new ServletHolder(servlet);
+
+            contextHandler.addServlet(holder, path);
+            return this;
+        }
+
+        public <T extends ObjectService> Builder addEndPoint(Servlet s, String path) throws Exception {
+            ServletHolder holder = new ServletHolder(s);
 
             contextHandler.addServlet(holder, path);
             return this;
